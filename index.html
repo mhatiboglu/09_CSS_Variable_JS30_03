@@ -23,9 +23,21 @@
     <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
     <style>
-        /*
-      misc styles, nothing to do with CSS variables
-    */
+      :root {
+          --baseColor : #c97f0f;
+          --spacingPixel : 10px;
+          --blurPixel : 10px;
+      }
+
+      img {
+          background: var(--baseColor);
+          padding: var(--spacingPixel);
+          filter: blur(var(--blurPixel))
+      }
+
+      h1 {
+          color : var(--baseColor)
+      }
 
         body {
             text-align: center;
