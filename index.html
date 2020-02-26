@@ -23,21 +23,21 @@
     <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
     <style>
-      :root {
-          --baseColor : #c97f0f;
-          --spacingPixel : 10px;
-          --blurPixel : 10px;
-      }
+        :root {
+            --baseColor: #c97f0f;
+            --spacingPixel: 10px;
+            --blurPixel: 10px;
+        }
 
-      img {
-          background: var(--baseColor);
-          padding: var(--spacingPixel);
-          filter: blur(var(--blurPixel))
-      }
+        img {
+            background: var(--baseColor);
+            padding: var(--spacingPixel);
+            filter: blur(var(--blurPixel))
+        }
 
-      h1 {
-          color : var(--baseColor)
-      }
+        h1 {
+            color: var(--baseColor)
+        }
 
         body {
             text-align: center;
@@ -58,6 +58,15 @@
     </style>
 
     <script>
+        const inputs = document.querySelectorAll('.controls input');
+
+        function handleUpdate() {
+            console.log(this.value);
+        }
+
+        inputs.forEach(input => input.addEventListener('change',handleUpdate))
+
+
     </script>
 
 </body>
